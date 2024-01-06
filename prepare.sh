@@ -117,7 +117,8 @@ rm -rf fenix/app/src/{beta,nightly,debug}
 # Patch the use of proprietary and tracking libraries
 patch_if_needed \
     "${PATCHES}/fenix-liberate.patch" \
-    "${PATCHES}/strict-etp.patch"
+    "${PATCHES}/strict-etp.patch" \
+    "${PATCHES}/0001-Remove-Pocket-from-Fenix.patch"
 
 #
 # Android Components
