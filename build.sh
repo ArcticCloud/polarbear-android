@@ -44,7 +44,7 @@ export MOZ_CHROME_MULTILOCALE=$(< "${PATCHES}/locales")
 
 mkdir -p obj.faat/fetches
 
-for _TARGET in x86_64 arm64 arm; do
+for _TARGET in x86 x86_64 arm64 arm; do
 
 setup_arch "${_TARGET}"
 
@@ -72,9 +72,9 @@ done
 
 # build the fat AAR for all platforms
 
-export MOZ_ANDROID_FAT_AAR_ARCHITECTURES="x86_64,arm64-v8a,armeabi-v7a"
+export MOZ_ANDROID_FAT_AAR_ARCHITECTURES="x86,x86_64,arm64-v8a,armeabi-v7a"
 
-for _TARGET in x86_64 arm64 arm; do
+for _TARGET in x86 x86_64 arm64 arm; do
 
 setup_arch "${_TARGET}"
 

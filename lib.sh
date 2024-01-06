@@ -95,8 +95,8 @@ function setup_arch() {
           ;;
       x86)
           ABI=x86
-          TARGET=x86-linux-android
-          RUST_TARGET=i686
+          TARGET=i686-linux-android
+          RUST_TARGET=x86
           TRIPLET="${TARGET}${MINSDK}"
           ;;
       x86_64)
