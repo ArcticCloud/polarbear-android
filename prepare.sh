@@ -51,7 +51,7 @@ sed -i \
 
 # Configure
 sed -i -e '/check_android_tools("emulator"/d' build/moz.configure/android-sdk.configure
-for _TARGET in x86_64 arm64 arm; then
+for _TARGET in x86 x86_64 arm64 arm; do
 
 setup_arch "${_TARGET}"
 

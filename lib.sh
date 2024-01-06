@@ -86,30 +86,31 @@ function patch_if_needed() {
 function setup_arch() {
   # Set up target parameters
   local _ARCH=$1
+  local _MINDSK=21
   case "$_ARCH" in
       arm)
           ABI=armeabi-v7a
           TARGET=armv7a-linux-androideabi
           RUST_TARGET=armv7
-          TRIPLET="${TARGET}$MINSDK"
+          TRIPLET="${TARGET}${_MINDSK}"
           ;;
       x86)
           ABI=x86
           TARGET=i686-linux-android
           RUST_TARGET=x86
-          TRIPLET="${TARGET}${MINSDK}"
+          TRIPLET="${TARGET}${_MINDSK}"
           ;;
       x86_64)
           ABI=x86_64
           TARGET=x86_64-linux-android
           RUST_TARGET=x86_64
-          TRIPLET="${TARGET}${MINSDK}"
+          TRIPLET="${TARGET}${_MINDSK}"
           ;;
       arm64)
           ABI=arm64-v8a
           TARGET=aarch64-linux-android
           RUST_TARGET=arm64
-          TRIPLET="${TARGET}$MINSDK"
+          TRIPLET="${TARGET}${_MINDSK}"
           ;;
       *)
           error "Unknown target code in ${_ARCH}." >&2
